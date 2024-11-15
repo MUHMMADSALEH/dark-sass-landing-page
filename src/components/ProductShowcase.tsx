@@ -1,5 +1,8 @@
+
 import Image from "next/image";
 import appScreen from "../assets/images/app-screen.png";
+
+
 export const ProductShowcase = () => {
 return (
 <div className="bg-black text-white bg-gradient-to-b ☐ from-black to-[#5D2CA8] py-[72px] sm:py-24">
@@ -12,7 +15,9 @@ progress, motivate your efforts, and celebrate your successes, one
 task at a time.
 </p>
 </div>
-<Image src={appScreen} alt="The product screenshot" className="mt-14" />
+<div className="w-full">
+<Image src={appScreen} alt="The product screenshot" className="mt-14 lg:mx-auto" />
+</div>
 </div>
 </div>
 );
