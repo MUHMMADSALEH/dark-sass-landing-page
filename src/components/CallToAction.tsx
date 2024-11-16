@@ -16,7 +16,7 @@ export const CallToAction = () => {
           progress and motivate your efforts.
         </p>
         <form className="mt-10 flex flex-col gap-2.5 max-w-sm mx-auto sm:flex-row ">
-         <input type="email"  placeholder="your@email.com" className="h-12 bg-white/20 rounded-lg px-5 flex-1 font-medium placeholder:text-[#9CA3AF]"/>
+         <input type="email"  placeholder="your@email.com" className="h-12 bg-white/20 rounded-lg px-5 sm:flex-1 font-medium placeholder:text-[#9CA3AF]"/>
          <button className="bg-white text-black h-12 rounded-lg px-5">Get access</button>
         </form>
     </div>
