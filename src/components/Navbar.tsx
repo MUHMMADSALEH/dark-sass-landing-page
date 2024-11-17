@@ -10,7 +10,7 @@ export const Navbar = () => {
 
 
 
-  return <div className="container bg-black " >
+  return <div className="bg-black "> <div className="container" >
     <div className="py-4 flex justify-between " >
       <div className="relative ">
         <div className="absolute w-full top-2 bottom-0 bg-[linear-gradient(to_right,#F87BFF,#FB92CF,#FFDD9B,#C2F0B1,#2FD8FE)] blur-md"></div>
@@ -29,4 +29,5 @@ export const Navbar = () => {
       </nav>
     </div>
   </div>;
+  </div>
 };
