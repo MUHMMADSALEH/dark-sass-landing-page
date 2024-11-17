@@ -1,13 +1,25 @@
+"use client"
 import helixImage from "../assets/images/helix2.png"
 import emojiStar from "../assets/images/emojistar.png"
+import { useEffect, useRef } from "react";
+import { useScroll, useTransform,motion } from "framer-motion";
 import Image from "next/image";
 export const CallToAction = () => {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const {scrollYProgress}=useScroll({
+    target:containerRef,
+    offset:['start end','end end']
+  })
+  useEffect(()=>{
+    scrollYProgress.on("change",(latestValue)=>console.log(latestValue))
+    },[])
 
+    const translateY=useTransform(scrollYProgress,[0,1],[-50,50])
   return (
-    <div className="bg-black Itext-white py-[72px] sm:py-24 text-center">
+    <div className="bg-black Itext-white py-[72px] sm:py-24 text-center " ref={containerRef}>
       <div className="container max-w-xl relative">
-        <Image src={helixImage} alt="" className="absolute top-6 left-[calc(100%+36px)]"/>
-        <Image src={emojiStar} alt="" className="absolute -top-[120px] right-[calc(100%+24px)] "/>
+     <motion.div style={{translateY}}><Image src={helixImage} alt="" className="absolute top-6 left-[calc(100%+36px)]" /></motion.div>
+   <motion.div style={{translateY}}><Image src={emojiStar} alt="" className="absolute -top-[120px] right-[calc(100%+24px)] "/></motion.div>
         <h2 className="font-bold text-5xl tracking-tighter">
           Get instant access
         </h2>
