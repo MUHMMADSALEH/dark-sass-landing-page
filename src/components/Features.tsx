@@ -2,7 +2,7 @@ import Feature from "./Feature";
 
 const features = [
   {
-    title: "Integration Ecosystem",
+    title: "Integration Ecosystem   ",
     description:
       "Enhance your productivity by connecting with your tools, keeping your essentials in one place.",
   },
